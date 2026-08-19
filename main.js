@@ -13,6 +13,14 @@ function resetGame() {
     return number
 }
 
+function getRandomColor () {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    console.log(`rgb(${r},${g},${b})`)
+
+    return `rgb(${r},${g},${b})`
+}
 
 function showGrid(q, number) {
     alert(`teste: number: ${number}`)
@@ -23,13 +31,16 @@ function showGrid(q, number) {
 
         cell.style.width = `calc(100% / ${number})`;
         cell.style.height = `calc(100% / ${number})`;
+        cell.style.opacity = "0.1"
 
         cell.addEventListener("mouseover", () => {
-            cell.style.backgroundColor = "black";
+            cell.style.backgroundColor = getRandomColor();
+            const currentOpacity = parseFloat(cell.style.opacity);
+            cell.style.opacity = currentOpacity + 0.1;
         })
-
+        
+        
         gridContainer.appendChild(cell)
     }
-
     return
 }
