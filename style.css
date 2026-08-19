@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    background: white;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vh; 
+    height: 90vh;
+    max-width: 90vw;
+    max-height: 90vw;
+    margin: auto;
+
+}
+
+.grid-item {
+    background-color: rgb(138,145,146);
+    border: 2px solid black; 
+    text-align: center;
+    align-content: center;
+    border-radius: 8px;
+}
+
+button {
+    background:  rgb(19, 18, 18);
+    padding: 12px 24px 12px 24px;
+    border-radius: 8px;
+    border: 2px solid gray;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+}
